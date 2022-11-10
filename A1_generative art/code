@@ -1,0 +1,58 @@
+//Kiana Greenwood
+//Assignment 1 
+//Random squares and circles with stroke and fill 
+
+void setup() {
+  size(500, 500); 
+  background(20);
+  noLoop();
+  
+}
+
+void draw() {
+  // random filled circles 
+noStroke();
+  for (int y =10; y < height; y += 30){
+    for (int x = 30; x < width; x += 30){
+      if (random(100) < 15) {
+       fill(random(100),random(255), random(255), 64);
+        
+        
+ ellipse(x, y, 100, 100);
+ 
+
+  
+  }
+}
+  }
+  //random filled and outlined rects 
+  //noFill();
+  stroke(20);
+  strokeWeight(4);
+  
+  for (int a =10; a < height; a += 30){
+    for (int b = 30; b < width; b += 30){
+      if (random(100) < 3) {
+       fill(random(100),random(255), random(255), 64);
+  
+  rect(a,b,80,80);
+  
+      }
+    }
+  }
+  //random outlined rects 
+  noFill();
+   stroke(30);
+  strokeWeight(2);
+  
+  for (int c =10; c < height; c += 30){
+    for (int d = 30; d < width; d += 30){
+      if (random(100) < 3) {
+       
+  rect(c,d,80,80);
+      }
+    }
+  }
+  //saveFrame("####_kmg.png");
+  
+}
