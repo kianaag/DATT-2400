@@ -1,1 +1,59 @@
+//Kiana Greenwood 
+//Spiral animation 
 
+float x = 200;
+float rt = 0;
+float angle;
+float line_x = 10;
+void setup(){
+ size(500,500); 
+  
+}
+
+void draw(){
+  
+  background(0);
+  
+  //4 green pulsing squares in each corner 
+    stroke(30, 100, 80);
+  strokeWeight(abs(15+sin(rt)));
+  rect(50, 50, 60, 60);
+  
+      stroke(30, 100, 80);
+  strokeWeight(abs(15+sin(rt)));
+  rect(400, 50 , 60, 60);
+  
+      stroke(30, 100, 80);
+  strokeWeight(abs(15+sin(rt)));
+  rect(50, 400 , 60, 60);
+  
+      stroke(30, 100, 80);
+  strokeWeight(abs(15+sin(rt)));
+  rect(400, 400 , 60, 60);
+  
+  //pulsing circle in the center of sketch 
+  stroke(30, 100, 80);
+  strokeWeight(abs(15+sin(rt)));
+  ellipse(width/2, height/2, 50, 50);
+  
+  //Spiral that slightly spins and goes in and out 3 times 
+  translate(width/2, height/2);
+  for (float a=0; a<360; a+=10){
+    pushMatrix();
+    rotate(radians(a));
+    stroke(255);
+    strokeWeight(3);
+    line(x*sin(radians(angle)), 0,50,10);
+    popMatrix();
+    
+    rt+=1.059;
+    //Stopping animation after 3 turns 
+    if (radians(rt) >= 360) {
+      noLoop();
+    }
+
+}
+
+angle++;
+//saveFrame("###_out.png");
+}
