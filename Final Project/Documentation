@@ -1,0 +1,23 @@
+This project is an attempt at a music visual interaction design peice. 
+While the music is playing users can interact with some of the objects on screen.
+The idea was inspired from generative art music videos but I wanted it to be interactive.
+Each page displays differnt visuals and then restarts when you hit the end page.
+I started the project by creating the starting page which is a moon above water by adding a
+circle for the moon and noise for the waves. 
+Trying to find code to have a page changing effect was really difficult but I eneded up 
+finding one on a reddit page where someone was looking for something similar. 
+From there I could work on individual pages to display and add music and images.
+I stuck with a black and white theme with grey tones changes throughout. 
+A website called fun programming was a place I went back to a lot to get inspiration 
+and help with coding needed for certain animations and functions. 
+For adding sound and images I watched Daniel Shiffman on Youtube. 
+Also watched his videos to understand mouseReleased and keyPressed. 
+I chose a generic song with no lyrics from youtube so it would go with every page. 
+I wish I could of adding more complex coding but I couldnt get some of my ideas to work
+and some coding was messing other parts. 
+I also would of added more pages to go through with differnt animations and visuals. 
+It found adding the println was really helpful to see the modes and add instructions for 
+yourself through coding the project. I never use it but now I can see how it is helpful, 
+especially when making bigger projects. 
+Im glad the system worked but it could of been more intreseting with differnt concepts 
+involved. 
