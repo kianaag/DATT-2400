@@ -1,1 +1,105 @@
+import processing.sound.*;
+SoundFile song;
+PImage star;
+
+float time = 4;
+float value = 0;
+int mode = 0;
+float r = 0;
+float circleY = 0;
+
+void setup() {
+  size(500,500);
+  println("click on canvas to change circle colour and use key [n] for next page");
+  println("mode: "+mode);
+  song = new SoundFile(this,"AnimeTrap.mp3");
+  song.loop();
+  star = loadImage("star.jpg");
+}
+
+void draw() {
+  background(255);
+  fill(value);
+  noStroke();
+  circle(250, 184, 220);
+ 
+  switch(mode) {
+  case 0:
+    stroke(0);
+   float x = 0;
+
+  while (x < width) {
+    line(x, 250 + 70 * noise(x / 100, time), x, height);
+    x = x + 1;
+  }
+  
+  time = time + 0.02; 
+  
+   
+    break;
+  case 1:
+ 
+ image(star, 0, 0);
+   noStroke();
+
+
+  ellipse(100, circleY, 30, 30);
+  ellipse(200, circleY, 30, 30);
+  ellipse(300, circleY, 30, 30);
+  ellipse(400, circleY, 30, 30);
+  
+  ellipse(circleY, 250 ,30, 30);
+  
+  circleY = circleY + 3;
+
+  if(circleY > height) {
+    circleY = 0;
+  }
+
+    break;
+  case 2:
+
+
+if(mouseX> 100){
+  background(10);}
+  
+  if(mouseX> 200){
+  background(30);}
+  
+  if(mouseX> 300){
+  background(50);}
+  
+  if(mouseX> 400){
+  background(70);}
+  
+  if(mouseX> 450){
+  background(80);}
+  
+  noStroke();
+  circle(250, 184, 220);
+
+    break;
+  default:
+    println("you should never see this");
+    break;
+  }
+}
+
+void keyPressed() {
+  if ( key == 'n' ) mode++;
+  if ( mode > 2 ) { 
+    println("reset"); 
+    mode = 0;
+  }
+  println("mode: "+mode);
+  
+}
+
+ void mouseReleased(){
+   if (value == 0){
+     value = 255;
+   }else{
+     value = random(255);
+}
+ }
 
